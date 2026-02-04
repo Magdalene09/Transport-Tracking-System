@@ -232,4 +232,3 @@ Tests validate key API endpoints using FastAPI’s ASGI test client.
 * No real-time GPS ingestion (data is simulated)
 * In-memory cache is not shared across instances
 * No authentication or authorization
-* Not intended for production use
