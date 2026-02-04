@@ -16,11 +16,9 @@ This system allows you to:
 * Calculate ETAs using recent movement data
 * Query route assignments and stop details
 
-It is suitable for **learning, demonstration, and portfolio purposes**, not production deployment.
-
 ---
 
-## 🧩 Key Components
+## 🧰 Tech Stack
 
 * **Backend API:** FastAPI
 * **Database:** PostgreSQL (custom `transport` schema)
@@ -190,17 +188,6 @@ All tables are under the PostgreSQL schema: `transport`
 The `setupdb.py` script creates all tables and loads sample data.
 
 ---
-
-## 🧰 Tech Stack
-
-### Backend
-
-* Python
-* FastAPI
-* Uvicorn
-* Pydantic v2
-* SQLAlchemy 2.x (async)
-* asyncpg
 
 ### Database
 
