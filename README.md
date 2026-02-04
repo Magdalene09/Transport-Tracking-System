@@ -109,7 +109,7 @@ This system allows you to:
 
 ## 🧮 How ETA Is Calculated (High Level)
 
-### A️⃣ Bus on the Same Route
+### Bus on the Same Route
 
 1. Fetch ordered stops for the route
 2. Fetch recent GPS locations (default: last 10)
@@ -126,7 +126,7 @@ Optional: target a specific stop using `stop_order`.
 
 ---
 
-### B️⃣ Bus on a Different Route (Placeholder Logic)
+### Bus on a Different Route (Placeholder Logic)
 
 Instead of real map routing, a simplified heuristic is used:
 
@@ -211,54 +211,6 @@ The `setupdb.py` script creates all tables and loads sample data.
 * pytest
 * pytest-asyncio / anyio
 * httpx (ASGITransport)
-
----
-
-## ▶️ How to Run the Project
-
-### 1️⃣ Setup the Database
-
-```bash
-python setupdb.py
-```
-
-Creates tables and inserts sample buses, routes, stops, locations, and assignments.
-
----
-
-### 2️⃣ Start the API Server
-
-```bash
-uvicorn main:app --reload
-```
-
-API runs at:
-
-```
-http://localhost:8000
-```
-
----
-
-### 3️⃣ Try Example Endpoints
-
-```text
-/bus/1/live
-/bus/BUS-001/routes
-/bus/BUS-001/eta?route_id=1
-```
-
----
-
-### 4️⃣ Open the Frontend Dashboard
-
-Open:
-
-```
-static/index.html
-```
-
-The dashboard assumes the API is running at `http://localhost:8000`.
 
 ---
 
