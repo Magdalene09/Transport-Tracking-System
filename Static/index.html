@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Transport Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bus"></i> Public Transport Tracking</h1>
+            <p>Real-time bus tracking and ETA information</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="card health-card">
+                <h2><i class="fas fa-heartbeat"></i> System Status</h2>
+                <div id="health-status" class="status-indicator">
+                    <div class="spinner"></div>
+                    <span>Checking...</span>
+                </div>
+            </div>
+
+            <div class="card location-card">
+                <h2><i class="fas fa-map-marker-alt"></i> Bus Location</h2>
+                <div class="form-group">
+                    <label for="bus-id">Bus ID:</label>
+                    <input type="number" id="bus-id" placeholder="Enter bus ID" min="1">
+                    <button id="get-location" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Get Location
+                    </button>
+                </div>
+                <div id="location-result" class="result-box hidden"></div>
+            </div>
+
+            <div class="card routes-card">
+                <h2><i class="fas fa-route"></i> Bus Routes</h2>
+                <div class="form-group">
+                    <label for="bus-number-routes">Bus Number:</label>
+                    <input type="text" id="bus-number-routes" placeholder="e.g., BUS-001">
+                    <button id="get-routes" class="btn btn-primary">
+                        <i class="fas fa-list"></i> Get Routes
+                    </button>
+                </div>
+                <div id="routes-result" class="result-box hidden"></div>
+            </div>
+
+            <div class="card eta-card">
+                <h2><i class="fas fa-clock"></i> ETA Calculator</h2>
+                <div class="form-group">
+                    <label for="bus-number-eta">Bus Number:</label>
+                    <input type="text" id="bus-number-eta" placeholder="e.g., BUS-001">
+                </div>
+                <div class="form-group">
+                    <label for="user-route-id">Your Route ID:</label>
+                    <input type="number" id="user-route-id" placeholder="Enter your route ID" min="1">
+                </div>
+                <button id="get-eta" class="btn btn-success">
+                    <i class="fas fa-calculator"></i> Calculate ETA
+                </button>
+                <div id="eta-result" class="result-box hidden"></div>
+            </div>
+        </div>
+
+        <div class="card activity-card">
+            <h2><i class="fas fa-history"></i> Recent Activity</h2>
+            <div id="activity-log" class="activity-log">
+                <div class="activity-item">
+                    <span class="timestamp">Welcome to Public Transport Tracking!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
